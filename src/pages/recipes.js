@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const Home = () => {
+const Recipes = () => {
   return (
     <Layout>
       <div>
-        <h1>Home</h1>
+        <h1>Recipes</h1>
       </div>
     </Layout>
   );
 };
 
-export default Home;
+export default Recipes;
