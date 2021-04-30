@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const NavBar = ({ children }) => {
+const NavBar = () => {
   return (
     <nav>
       <ul>
