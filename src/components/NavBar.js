@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FiAlignJustify } from "react-icons/fi";
 import logo from "../assets/images/logo.svg";
 
 const NavBar = () => {
+  const [show, setShow] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <Link to="/">
+          <Link to="/" onClick={() => setShow(!show)}>
             <img src={logo} alt="img" />
           </Link>
-          <button className="nav-btn">
+          <button className="nav-btn" onClick={() => setShow(!show)}>
             <FiAlignJustify />
           </button>
         </div>
-        <div className="nav-links show-links">
-          <Link to="/" className="nav-link" activeClassName="active-link">
+        <div className={show ? "nav-links show-links" : "nav-links"}>
+          <Link
+            to="/"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(!show)}
+          >
             Home
           </Link>
           <Link
@@ -26,14 +33,24 @@ const NavBar = () => {
           >
             Recipes
           </Link>
-          <Link to="/tags" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/tags"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(!show)}
+          >
             Tags
           </Link>
-          <Link to="/about" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/about"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(!show)}
+          >
             About
           </Link>
           <div className="nav-link contact-link">
-            <Link to="/contact" className="btn">
+            <Link to="/contact" className="btn" onClick={() => setShow(!show)}>
               Contact
             </Link>
           </div>
