@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import RecipesList from "../components/RecipesList";
 
 export const query = graphql`
@@ -31,8 +31,6 @@ const About = ({
     allContentfulRecipe: { nodes: recipes },
   },
 }) => {
-  console.log("test", recipes);
-
   return (
     <Layout>
       <main className="page">
