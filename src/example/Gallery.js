@@ -25,8 +25,6 @@ const Gallery = () => {
   const data = useStaticQuery(query);
   const nodes = data.allFile.nodes;
 
-  console.log("test", data);
-
   return (
     <Wrapper>
       {nodes.map((image, index) => {
